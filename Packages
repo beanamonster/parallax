@@ -1,0 +1,14 @@
+Package: com.beanamonster.parallax
+Version: 0.1-1
+Architecture: iphoneos-arm
+Maintainer: beanamonster <benjamina@zoho.com>
+Depends: com.matchstic.xenhtml
+Filename: ./debs/com.beanamonster.parallax.deb
+Size: 2511566
+MD5sum: 53882FC8DB942DA3CC874074C376208C
+SHA1: F7F365CFD3FCD5621B04F91C71E3BEA48ED28D00
+SHA256: 9F05B5B310E0D98D2907C8033ACDB2ECB6A3190C56197ACF9D580BFC1EF44BB1
+Section: Widgets
+Description: Parallax wallpapers for your iOS devices.
+Author: beanamonster <benjamina@zoho.com>
+Name: ParallaxWallpapers
