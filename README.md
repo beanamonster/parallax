@@ -6,7 +6,9 @@ Parallax wallpapers for your iOS devices.
 
 ### 1.9-2.1
 
- - Added new wallpapers: Canola Meadow, jcolorful
+ - Added new wallpapers: 
+     - Canola Meadow
+     - jcolorful
 
 ### 1.8-2.1
 
