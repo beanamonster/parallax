@@ -1,6 +1,6 @@
 # Parallax Wallpapers
 
-Parallax wallpapers for your iOS devices using Xen HTML.
+Parallax wallpapers for your iOS devices.
 
 # Updates
 
