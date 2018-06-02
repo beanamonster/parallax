@@ -4,6 +4,14 @@ Parallax wallpapers for your iOS devices.
 
 # Updates
 
+### 1.10-2.1
+
+ - Added new wallpapers:
+	 - Anstractor Vestalia
+	 - Christmas Aurora
+	 - Loire no16
+	 - Loire no16 (animated)
+
 ### 1.9-2.1
 
  - Added new wallpapers: 

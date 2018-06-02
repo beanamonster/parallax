@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+
+</head>
+<body>
+
+	<div id="container" class="container">
+		<div id="scene" class="scene">
+			<div class="layer" data-depth="0.20"><img src="images/layer7.png"></div>
+			<div class="layer" data-depth="0.30"><img src="images/layer6.png"></div>
+			<div class="layer" data-depth="0.60"><img src="images/layer5.png"></div>
+			<div class="layer" data-depth="0.60" id="train"><img id="trImg" src="images/frames/layer4_001.png"></div>
+			<div class="layer" data-depth="0.70"><img src="images/layer3.png"></div>
+			<div class="layer" data-depth="0.85"><img src="images/layer2.png"></div>
+            <div class="layer" data-depth="1.00"><img src="images/layer1.png"></div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="./parallax.js"></script>
+	<script>
+		// Pretty simple huh?
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+		
+		var tr = document.getElementById("train");
+		var trImg = document.getElementById("trImg");
+		var srcPref = "images/frames/layer4_";
+		var cTr = 1;
+		var iz = "00";
+		var dz = "0";
+		var trWait;
+		
+		function animate() {
+			trWait = setTimeout(function() {
+				console.log("Animation started. ");
+				var trAnimate = setInterval(function() {
+					if(cTr >= 537) {
+						clearInterval(trAnimate);
+						cTr = 1;
+						setTimeout(function() {
+							animate();
+						}, 5000);
+					}
+					if(cTr < 9) {
+						trImg.src = srcPref + iz + cTr + ".png";
+						cTr++;
+					} else if(cTr >= 9 && cTr < 100) {
+						trImg.src = srcPref + dz + cTr + ".png";
+						cTr++;
+					} else if(cTr >= 100) {
+						trImg.src = srcPref + cTr + ".png";
+						cTr++;
+					}
+				}, 16);
+			}, 1000);
+		}
+		animate();
+	</script>
+
+</body>
+</html>
