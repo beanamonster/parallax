@@ -4,8 +4,10 @@ Parallax wallpapers for your iOS devices.
 
 # Updates
 
+## Part 1
 ### 1.10-2.1
 
+ - All future wallpapers will be added to 'Parallax Wallpapers part 2'
  - Added new wallpapers:
 	 - Anstractor Vestalia
 	 - Christmas Aurora
