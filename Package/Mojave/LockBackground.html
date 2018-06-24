@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+
+</head>
+<body>
+
+	<div id="container" class="container">
+		<div id="scene" class="scene">
+			<div class="layer" data-depth="0.40"><img class="image" src="images/layer_2d.png"></div>
+			<div class="layer" data-depth="0.85"><img class="image" src="images/layer_1d.png"></div>
+            <div class="layer" data-depth="1.00"><img class="image" src="images/layer_0d.png"></div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="./parallax.js"></script>
+	<script>
+
+	// Pretty simple huh?
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+	var srcPref = "images/layer_";
+	var domPref = document.getElementsByClassName("image");
+	var cd;
+	var counter = setInterval(function() {
+		checkTime();
+	}, 10000);
+	function checkTime() {
+		cd = new Date();
+		if(cd.getHours() >= 5 && cd.getHours() < 21) {
+			domPref[0].src = srcPref + "2d.png";
+			domPref[1].src = srcPref + "1d.png";
+			domPref[2].src = srcPref + "0d.png";
+			document.body.style.backgroundColor = "#a8afbd";
+		} else if(cd.getHours() >= 21 || cd.getHours() < 5) {
+			domPref[0].src = srcPref + "2n.png";
+			domPref[1].src = srcPref + "1n.png";
+			domPref[2].src = srcPref + "0n.png";
+			document.body.style.backgroundColor = "#394e6d";
+		}
+	}
+	checkTime();
+	</script>
+
+</body>
+</html>

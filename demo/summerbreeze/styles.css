@@ -1,0 +1,42 @@
+HTML{
+    -webkit-transform: scale(2,2);
+}
+
+body {
+  background: #473535; /*////////// CHANGE THIS //////////*/
+  color: #555;
+  font-family: monospace;
+  font-size: 18px;
+  margin: 0; }
+
+#train {
+	position:absolute;
+	bottom:0;
+}
+
+img {
+  display: block;
+  width: 100%; }
+
+input[type=checkbox] {
+  display: none; }
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 1em;
+  padding: 0.4em 0; }
+
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px;
+  position: relative; }
+
+.container--offset {
+  margin-left: 0; }
+
+.scene {
+  margin: 0;
+  padding: 0; }

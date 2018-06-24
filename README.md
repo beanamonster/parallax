@@ -4,6 +4,18 @@ Parallax wallpapers for your iOS devices.
 
 # Updates
 
+## Part 2
+### 1.0-2.1
+
+ - Added new wallpapers:
+	 - Prado no3
+	 - XRAY 6
+	 - Black Hex
+	 - Spruce-fir Forest
+	 - Summer Breeze (animated)
+	 - Mojave
+ - Released Part 2
+
 ## Part 1
 ### 1.10-2.1
 

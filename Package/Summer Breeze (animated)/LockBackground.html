@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+
+</head>
+<body>
+	<div id="container" class="container">
+		<div id="scene" class="scene">
+            <div class="layer" data-depth="1.00"><img src="images/layer2.png"></div>
+            <div class="layer" id="train" data-depth="1.00"><img id="trImg" src="images/layer1_01.png"></div>
+		</div>
+	</div>
+		<script>
+		var tr = document.getElementById("train");
+		var trImg = document.getElementById("trImg");
+		var srcPref = "images/layer1_";
+		var cTr = 1;
+		var dz = "0";
+		var trWait;
+		function animate() {
+			trWait = setTimeout(function() {
+				var trAnimate = setInterval(function() {
+					if(cTr >= 50) {
+						cTr = 1;
+					}
+					if(cTr < 10) {
+						trImg.src = srcPref + dz + cTr + ".png";
+						cTr++;
+					} else if(cTr >= 9) {
+						trImg.src = srcPref + cTr + ".png";
+						cTr++;
+					}
+				}, 50);
+			}, 1000);
+		}
+		animate();
+	</script>
+</body>
+</html>
